@@ -9,7 +9,7 @@ A fun little AI web app: pick a random topic, write your honest opinion, and an 
 4. The model scores your text and tells you if it's giving good or bad vibes
 
 ## Tech
-- **Model:** LSTM (Bidirectional embedding + LSTM layer) trained on the IMDB 50k reviews dataset
+- **Model:** LSTM (Embedding + LSTM layer) trained on the IMDB 50k reviews dataset
 - **Framework:** TensorFlow / Keras
 - **Frontend:** Streamlit
 - **Deployment:** Streamlit Community Cloud
@@ -18,6 +18,14 @@ A fun little AI web app: pick a random topic, write your honest opinion, and an 
 [https://yasserwebsitefortextclass.streamlit.app/]
 
 ## Run locally
-```bash
 pip install -r requirements.txt
 streamlit run app.py
+
+## Model details
+- Vocabulary size: 15,000
+- Max sequence length: 200
+- Trained on balanced binary sentiment data (positive/negative)
+- ~85% validation accuracy
+
+---
+Built by [Yasser](https://github.com/m1deey)
